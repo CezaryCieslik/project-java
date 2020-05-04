@@ -14,5 +14,12 @@ public class Main {
 	me.pet.takeForAWalk();
 	me.pet.feed();
     me.pet.takeForAWalk();
+
+    Car Rusty = new Car();
+    Rusty.producent = "Scoda";
+    Rusty.model = "Rapid";
+    Rusty.yearOfProduction = 2015;
+
+    me.setCar(Rusty);
     }
 }
