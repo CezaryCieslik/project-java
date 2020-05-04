@@ -18,7 +18,7 @@ public class Animal {
             System.out.println("U can't feed dead animal...");
         } else {
             weight++;
-            System.out.println("Not too much, i don't wanna be fat, i weigh now" + this.weight );
+            System.out.println("Not too much, i don't wanna be fat, i weigh now " + this.weight );
         }
     }
 
@@ -27,7 +27,7 @@ public class Animal {
         if (weight <=0) {
             System.out.println("U too will die of hunger!");
         } else {
-            System.out.println("I love u human, i weigh now" + this.weight );
+            System.out.println("I love u human, i weigh now " + this.weight );
         }
     }
 }

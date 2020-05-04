@@ -21,5 +21,8 @@ public class Main {
     Rusty.yearOfProduction = 2015;
 
     me.setCar(Rusty);
+
+    me.getSalary(3000.0);
+    me.setSalary(-1.0);
     }
 }
