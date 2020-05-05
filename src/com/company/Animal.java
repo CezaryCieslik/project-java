@@ -3,6 +3,7 @@ package com.company;
 public class Animal {
     final String species;
     private Double weight;
+    String name;
 
     public static final Double DEFAULT_DOG_WEIGHT = 10.0;
 
@@ -29,5 +30,9 @@ public class Animal {
         } else {
             System.out.println("I love u human, i weigh now " + this.weight );
         }
+    }
+
+    public String toString(){
+        return name;
     }
 }

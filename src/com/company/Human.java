@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.devices.Car;
+
 import java.sql.Timestamp;
 
 public class Human {
@@ -42,5 +44,9 @@ public class Human {
             System.out.println("Don't try to be sneaky with your income, ZUS and US already know everything.");
         }
         return this.salary;
+    }
+
+    public String toString(){
+        return firstName+""+lastName;
     }
 }

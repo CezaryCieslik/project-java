@@ -1,5 +1,8 @@
 package com.company;
 
+import com.company.devices.Car;
+import com.company.devices.Phone;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -22,5 +25,18 @@ public class Main {
 
     me.getSalary(3000.0);
     me.setSalary(-1.0);
+
+    Phone smart = new Phone();
+    smart.system = "Android";
+    smart.model = "Pocophone";
+    smart.producent = "Xiaomi";
+
+    Animal doggo = new Animal("dog");
+    doggo.name = "Jaskier";
+
+    System.out.println(me);
+    System.out.println(Rusty);
+    System.out.println(smart);
+    System.out.println(doggo);
     }
 }
