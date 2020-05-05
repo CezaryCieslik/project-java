@@ -1,19 +1,29 @@
 package com.company;
 
 import java.sql.Timestamp;
-import java.util.Date;
 
 public class Human {
     String firstName;
     String lastName;
     Animal pet;
-    Car car;
+    private Car car;
     private Double salary = 1000.0;
     Timestamp lastCheckDate;
-    private Double raise;
 
-    void setCar(Car car){
-        this.car = car;
+    public Car getCar(){
+        return car;
+    }
+
+    public void setCar(Car car){
+        if (this.salary > car.value){
+            System.out.println("Purchase was successful.");
+            this.car = car;
+        } else if (this.salary * 12 > car.value){
+            System.out.println("U managed to buy it on credit.");
+            this.car = car;
+        } else {
+            System.out.println("U are too poor, find a way to earn more money.");
+        }
     }
 
     public Double getSalary(Double salary){
