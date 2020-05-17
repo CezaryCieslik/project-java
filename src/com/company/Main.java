@@ -38,5 +38,8 @@ public class Main {
     System.out.println(Rusty);
     System.out.println(smart);
     System.out.println(doggo);
+
+    smart.turnOn();
+    Rusty.turnOn();
     }
 }

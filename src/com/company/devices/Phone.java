@@ -1,11 +1,19 @@
 package com.company.devices;
 
-public class Phone {
-    public String producent;
-    public String model;
+public class Phone extends Device {
     public String system;
 
-    public String toString(){
-        return producent + "" + model + "" + system;
+    @Override
+    public String toString() {
+        return "Phone{" +
+                "model='" + model + '\'' +
+                ", producent='" + producent + '\'' +
+                ", yearOfProduction=" + yearOfProduction +
+                '}';
+    }
+
+    @Override
+    public void turnOn() {
+        System.out.println("Ding ding...");
     }
 }
