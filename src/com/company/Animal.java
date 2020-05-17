@@ -1,7 +1,7 @@
 package com.company;
 
-public class Animal {
-    final String species;
+public class Animal implements salleable{
+    String species;
     private Double weight;
     String name;
 
@@ -12,6 +12,10 @@ public class Animal {
         if (species.equals("dog")) {
             this.weight = DEFAULT_DOG_WEIGHT;
         }
+    }
+
+    public Animal() {
+
     }
 
     void feed() {
@@ -34,5 +38,16 @@ public class Animal {
 
     public String toString(){
         return name;
+    }
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price) throws Exception {
+        if (seller.canSellAnimal(this) && buyer.canBuyAnimal(this,price)){
+            buyer.cash -= price;
+            seller.cash += price;
+            seller.pet = null;
+            buyer.pet = this;
+            System.out.println("Transaction was successful.");
+        } else System.out.println("Transaction failed.");
     }
 }

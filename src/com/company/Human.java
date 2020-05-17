@@ -1,30 +1,58 @@
 package com.company;
 
 import com.company.devices.Car;
+import com.company.devices.Device;
+import com.company.devices.Phone;
 
 import java.sql.Timestamp;
 
-public class Human {
+public class Human extends Animal {
     String firstName;
     String lastName;
     Animal pet;
     private Car car;
     private Double salary = 1000.0;
     Timestamp lastCheckDate;
+    public Phone iphone;
+    public double cash = 1000.0;
+
+    public Human(String species) {
+        super(species);
+    }
+
+    public Human() {
+        super("Human");
+    }
 
     public Car getCar(){
         return car;
     }
 
     public void setCar(Car car){
-        if (this.salary > car.value){
-            System.out.println("Purchase was successful.");
-            this.car = car;
-        } else if (this.salary * 12 > car.value){
-            System.out.println("U managed to buy it on credit.");
-            this.car = car;
-        } else {
-            System.out.println("U are too poor, find a way to earn more money.");
+        this.car = car;
+    }
+
+    public void removeCar(Car car) throws Exception {
+        boolean removed = false;
+        if (canSellDevice(car)){
+            this.car = null;
+            removed = true;
+        } if (!removed){
+            throw new Exception("U don't have car.");
+        }
+    }
+
+    public void setIphone(Phone iphone){
+        this.iphone = iphone;
+    }
+
+    public void removeIphone(Phone iphone) throws Exception {
+        boolean removed = false;
+        if (canSellDevice(iphone)) {
+            this.iphone = null;
+            removed = true;
+        } if (!removed) {
+            throw new Exception("U don't have phone.");
         }
     }
 
@@ -48,5 +76,31 @@ public class Human {
 
     public String toString(){
         return firstName+""+lastName;
+    }
+
+    public boolean canSellAnimal(Animal animal){
+         return this.pet == animal;
+    }
+
+    public boolean canSellDevice(Device device){
+        if (device instanceof Car){
+            return this.car == device;
+        } else if (device instanceof Phone){
+            return this.iphone == device;
+        }
+        return false;
+    }
+
+    public boolean canBuyDevice(Device device, Double price){
+        return price <= this.cash;
+    }
+
+    public boolean canBuyAnimal(Animal pet, Double price) {
+        return price <= this.cash;
+    }
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price) throws Exception{
+        throw new Exception("Boi, selling hoomans is forbidden!");
     }
 }

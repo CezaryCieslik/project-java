@@ -1,6 +1,9 @@
 package com.company.devices;
 
-public abstract class Device {
+import com.company.Human;
+import com.company.salleable;
+
+public abstract class Device implements salleable {
     public String model;
     public String producent;
     public Integer yearOfProduction;
@@ -10,4 +13,8 @@ public abstract class Device {
     }
 
     public abstract void turnOn();
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price) throws Exception {
+    }
 }
