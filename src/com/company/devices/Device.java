@@ -1,6 +1,6 @@
 package com.company.devices;
 
-import com.company.Human;
+import com.company.creatures.Human;
 import com.company.salleable;
 
 public abstract class Device implements salleable {

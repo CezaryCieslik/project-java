@@ -1,4 +1,4 @@
-package com.company;
+package com.company.creatures;
 
 import com.company.devices.Car;
 import com.company.devices.Device;
@@ -7,9 +7,9 @@ import com.company.devices.Phone;
 import java.sql.Timestamp;
 
 public class Human extends Animal {
-    String firstName;
-    String lastName;
-    Animal pet;
+    public String firstName;
+    public String lastName;
+    public Animal pet;
     private Car car;
     private Double salary = 1000.0;
     Timestamp lastCheckDate;
