@@ -2,8 +2,12 @@ package com.company.devices;
 
 import com.company.creatures.Human;
 
-public class Car extends Device {
+public abstract class Car extends Device {
     public Double value;
+
+    public Car(String model, String producent, Integer yearOfProduction) {
+        super();
+    }
 
     @Override
     public String toString() {
@@ -29,4 +33,6 @@ public class Car extends Device {
             System.out.println("Transaction was successful.");
         } else System.out.println("Transaction failed.");
     }
+
+    public abstract void refuel();
 }

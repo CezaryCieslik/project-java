@@ -3,8 +3,10 @@ package com.company;
 import com.company.creatures.Animal;
 import com.company.creatures.Human;
 import com.company.creatures.Pet;
-import com.company.devices.Car;
-import com.company.devices.Phone;
+import com.company.devices.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main  {
 
@@ -51,10 +53,9 @@ public class Main  {
 	me.pet.feed();
     me.pet.takeForAWalk();
 
-    Car Rusty = new Car();
-    Rusty.producent = "Scoda";
-    Rusty.model = "Rapid";
-    Rusty.yearOfProduction = 2015;
+    Car rustyOne = new LPG("Rapid","Scoda",2010);
+    Car cleanOne = new Disel("Octavia","Scoda",2012);
+    Car dirtyOne = new Electric("Fabia","Scoda", 2015);
 
     me.getSalary(3000.0);
     me.setSalary(-1.0);
@@ -67,11 +68,9 @@ public class Main  {
 
 
     System.out.println(me);
-    System.out.println(Rusty);
     System.out.println(smart);
 
     smart.turnOn();
-    Rusty.turnOn();
 
     me.pet.sell(me, boi, 200.0);
     System.out.println(me.pet + " " + me.cash);
@@ -83,5 +82,25 @@ public class Main  {
 
     Pet cat = new Pet("Cat");
     cat.feed(1.0);
+
+    boi.iphone.installAnApp("TESTER");
+    boi.iphone.installAnApp("TESTER","CHICKEN");
+    boi.iphone.installAnApp("TESTER","CHICKEN","bronz4eva.au");
+
+    List<String> appTest = new ArrayList<String>();
+    appTest.add("Messenger");
+    appTest.add("YouTube");
+    appTest.add("Steam");
+    boi.iphone.installAnApp(appTest);
+
+    URL apptest = new URL("ABC", "POOP","pifpaf.com");
+    boi.iphone.installAnApp(apptest);
+
+    rustyOne.refuel();
+    System.out.println();
+    cleanOne.refuel();
+    System.out.println();
+    dirtyOne.refuel();
+    System.out.println();
     }
 }
