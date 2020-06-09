@@ -104,13 +104,8 @@ public class Main  {
     dirtyOne.refuel();
     System.out.println();
 */
-    me.setCar(rustyOne, 0);
-    System.out.println(me.getCar(0));
-     try{
-         rustyOne.sell(me,boi,100.0);
-     }catch (Exception e){
-         e.printStackTrace();
-     }
-     System.out.println(Arrays.toString(boi.getGarage()));
+    me.setCar(rustyOne,1);
+    rustyOne.humanAsoldToHumanB(me,boi);
+    System.out.println(rustyOne.numberOfTransactionOnThisCar());
     }
 }

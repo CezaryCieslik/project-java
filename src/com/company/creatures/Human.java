@@ -180,4 +180,8 @@ public class Human extends Animal {
     public void sell(Human seller, Human buyer, Double price) throws Exception{
         throw new Exception("Boi, selling hoomans is forbidden!");
     }
+
+    public boolean owner(Car car) throws Exception{
+        throw new Exception("pls work");
+    }
 }
