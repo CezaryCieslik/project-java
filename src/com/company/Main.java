@@ -2,12 +2,7 @@ package com.company;
 
 import com.company.creatures.Animal;
 import com.company.creatures.Human;
-import com.company.creatures.Pet;
 import com.company.devices.*;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class Main  {
 
