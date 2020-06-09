@@ -3,8 +3,8 @@ package com.company.devices;
 public class LPG extends Car {
 
 
-    public LPG(String model, String producent, Integer yearOfProduction){
-        super(model,producent,yearOfProduction);
+    public LPG(String model, String producent, Integer yearOfProduction, Double price){
+        super(model, producent, yearOfProduction, price);
     }
 
     @Override

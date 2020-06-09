@@ -6,13 +6,14 @@ import com.company.creatures.Pet;
 import com.company.devices.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Main  {
 
     public static void main(String[] args) throws Exception {
 
-	Human me = new Human();
+	Human me = new Human(2);
 	me.firstName = "Cezary";
 	me.lastName = "Cieślik";
 	me.pet = new Animal() {
@@ -36,11 +37,11 @@ public class Main  {
             super.feed(foodWeight);
         }
     };
-	Human boi = new Human();
+	Human boi = new Human(1);
 	boi.firstName = "Alfred";
 	boi.lastName = "Maj";
 
-	Human boi2 = new Human();
+	Human boi2 = new Human(3);
 	boi2.firstName = "Jan";
 	boi2.lastName = "Kowalski";
 
@@ -53,11 +54,11 @@ public class Main  {
 	me.pet.feed();
     me.pet.takeForAWalk();
 
-    Car rustyOne = new LPG("Rapid","Scoda",2010);
-    Car cleanOne = new Disel("Octavia","Scoda",2012);
-    Car dirtyOne = new Electric("Fabia","Scoda", 2015);
+    Car rustyOne = new LPG("Rapid","Scoda",2010,5000.0);
+    Car cleanOne = new Disel("Octavia","Scoda",2012,6000.0);
+    Car dirtyOne = new Electric("Fabia","Scoda", 2015,7000.0);
 
-    me.getSalary(3000.0);
+    /*me.getSalary(3000.0);
     me.setSalary(-1.0);
 
     Phone smart = new Phone();
@@ -102,5 +103,14 @@ public class Main  {
     System.out.println();
     dirtyOne.refuel();
     System.out.println();
+*/
+    me.setCar(rustyOne, 0);
+    System.out.println(me.getCar(0));
+     try{
+         rustyOne.sell(me,boi,100.0);
+     }catch (Exception e){
+         e.printStackTrace();
+     }
+     System.out.println(Arrays.toString(boi.getGarage()));
     }
 }

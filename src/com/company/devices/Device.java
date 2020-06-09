@@ -7,6 +7,7 @@ public abstract class Device implements salleable {
     public String model;
     public String producent;
     public Integer yearOfProduction;
+    public Double value;
 
     public String toString(){
         return model;

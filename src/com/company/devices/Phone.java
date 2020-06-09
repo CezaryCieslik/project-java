@@ -26,7 +26,7 @@ public class Phone extends Device {
         System.out.println("Ding ding...");
     }
 
-    @Override
+    /*@Override
     public void sell(Human seller, Human buyer, Double price) throws Exception{
         if (seller.canSellDevice(this) && buyer.canBuyDevice(this,price)){
             buyer.cash -= price;
@@ -35,7 +35,7 @@ public class Phone extends Device {
             buyer.setIphone(this);
             System.out.println("Transaction was successful.");
         } else System.out.println("Transaction failed.");
-    }
+    }*/
 
     public void installAnApp(String appName){
         installAnApp(appName, defaultAppServer, deafultAppVersion);

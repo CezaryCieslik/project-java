@@ -1,8 +1,8 @@
 package com.company.devices;
 
 public class Electric extends Car {
-    public Electric(String model, String producent, Integer yearOfProduction) {
-        super(model, producent, yearOfProduction);
+    public Electric(String model, String producent, Integer yearOfProduction, Double price) {
+        super(model, producent, yearOfProduction, price);
     }
 
     @Override
